@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+
+
+class Main {
+    public static void main(String[] args) {
+        //Variable Section
+        int gradeNimo;
+        int lainNgaGrade;
+        int sum = 0;
+        int counter = 0;
+        boolean repeat = false;
+        //Write a program that ask the user for a grade.
+            Scanner yawa = new Scanner(System.in);
+            System.out.print("Gai kog grade nimo: ");
+            gradeNimo = yawa.nextInt();
+            sum = sum + gradeNimo;
+            counter++;
+            yawa.nextLine();
+        
+            do {
+                System.out.print("Mohatag pa ka ug lain? YES/NO "); 
+                String tubag = yawa.nextLine();
+            
+                    if (tubag.equals("YES")) {
+                        System.out.print("Ari bi: ");
+                        lainNgaGrade = yawa.nextInt();
+                        sum = sum + lainNgaGrade;
+                        counter++;
+                        repeat = true;
+                    }
+                    else if (tubag.equals("NO")) {
+                        System.out.print(sum/counter);
+                        repeat = false;
+                    }
+                    else {
+                        System.out.println("Tarungag tubag!");
+                        repeat = true;
+                    }
+            }
+            while (repeat);
+
+
+
+
+        yawa.close();
+    }
+}
