@@ -1,0 +1,538 @@
+import java.util.Scanner;
+
+
+
+class Main {
+    
+    public static void main(String[] args) {
+        //Variable section
+        //List of foods
+        int lumpia = 0;
+        int humba = 0;
+        int manok = 0;
+        int chips = 0;
+        int fries = 0;
+        int tempura = 0;
+        int emperador = 0;
+        int kulafu = 0;
+        int redHorse = 0;
+        //List of prices
+        int pLumpia = 20;
+        int pHumba = 50;
+        int pManok = 45;
+        int pChips = 10;
+        int pFries = 30;
+        int pTempura = 15;
+        int pEmperador = 69;
+        int pKulafu = 69;
+        int pRedHorse = 69;
+        //Sum of prices
+        int sLumpia = 0;
+        int sHumba = 0;
+        int sManok = 0;
+        int sChips = 0;
+        int sFries = 0;
+        int sTempura = 0;
+        int sEmperador = 0;
+        int sKulafu = 0;
+        int sRedHorse = 0;
+        int totalSum = 0;
+        //repeat
+        boolean repeat1 = false;
+
+        Scanner yawa = new Scanner(System.in);
+        //Mamutana if mo order ba or di
+        System.out.print("Mo order ka? Y/N ");
+        String tubagtubag = yawa.nextLine();
+        do {
+            if (tubagtubag.equals("Y")) {
+                System.out.println("List of FOODS:");
+                System.out.println("1. Lumpia");
+                System.out.println("2. Humba");
+                System.out.println("3. Manok");
+                System.out.println("List of SNACKS:");
+                System.out.println("4. Chips");
+                System.out.println("5. Fries");
+                System.out.println("6. Tempura");
+                System.out.println("List of BEVERAGES");
+                System.out.println("7. Emperador");
+                System.out.println("8. Kulafu");
+                System.out.println("9. Red Horse");
+                System.out.println("10. Cancel Order");
+                int orderniya = yawa.nextInt();
+                yawa.nextLine();
+                    switch (orderniya) {
+                        case 1:
+                        lumpia++;
+                        sLumpia = sLumpia + pLumpia;
+                        totalSum = totalSum + pLumpia;
+                        System.out.println("Successfully added Lumpia!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag1 = yawa.nextLine();
+                            if (tubag1.equals("Y")) {
+                                repeat1 = true;
+                            }
+                            else if (tubag1.equals("N")) {
+                                System.out.println("Mga gi order:");
+                                    if (lumpia > 0) {
+                                    System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                    repeat1 = false;
+                                }
+                                    if (humba > 0) {
+                                        System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                    repeat1 = false;
+                                }
+                                    if (manok > 0) {
+                                        System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                    repeat1 = false;
+                                }
+                                    if (chips > 0) {
+                                        System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                    repeat1 = false;
+                                }         
+                                    if (fries > 0) {
+                                        System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                    repeat1 = false;
+                                }     
+                                    if (tempura > 0) {
+                                        System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                    repeat1 = false;
+                                }     
+                                    if (emperador > 0) {
+                                        System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                    repeat1 = false;
+                                }     
+                                    if (kulafu > 0) {
+                                        System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                    repeat1 = false;
+                                }     
+                                    if (redHorse > 0) {
+                                        System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                    repeat1 = false;
+                                }     
+                                System.out.print("Total: " + totalSum + " Pesos");
+                            }
+                        break;
+                        case 2:
+                        humba++;
+                        sHumba = sHumba + pHumba;
+                        totalSum = totalSum + pHumba;
+                        System.out.println("Successfully added Humba!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag2 = yawa.nextLine();
+                            if (tubag2.equals("Y")) {
+                                repeat1 = true;
+                        }
+                        else if (tubag2.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 3:
+                        manok++;
+                        sManok = sManok + pManok;
+                        totalSum = totalSum + pManok;
+                        System.out.println("Successfully added Manok!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag3 = yawa.nextLine();
+                            if (tubag3.equals("Y")) {
+                                repeat1 = true;
+                        }
+                        else if (tubag3.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+  
+                        break;
+                        case 4:
+                        chips++;
+                        sChips = sChips + pChips;
+                        totalSum = totalSum + pChips;
+                        System.out.println("Successfully added Chips!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag4 = yawa.nextLine();
+                            if (tubag4.equals("Y")) {
+                                repeat1 = true;
+                        }    
+                        else if (tubag4.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 5:
+                        fries++;
+                        sFries = sFries + pFries;
+                        totalSum = totalSum + pFries;
+                        System.out.println("Successfully added Fries!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag5 = yawa.nextLine();
+                            if (tubag5.equals("Y")) {
+                                repeat1 = true;
+                        }
+                        else if (tubag5.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 6:
+                        tempura++;
+                        sTempura = sTempura + pTempura;
+                        totalSum = totalSum + pTempura;
+                        System.out.println("Successfully added Tempura!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag6 = yawa.nextLine();
+                            if (tubag6.equals("Y")) {
+                                repeat1 = true;
+                        }                       
+                        else if (tubag6.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 7:
+                        emperador++;
+                        sEmperador = sEmperador + pEmperador;
+                        totalSum = totalSum + pEmperador;
+                        System.out.println("Successfully added Emperador!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag7 = yawa.nextLine();
+                            if (tubag7.equals("Y")) {
+                                repeat1 = true;
+                        }             
+                        else if (tubag7.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 8:
+                        kulafu++;
+                        sKulafu = sKulafu + pKulafu;
+                        totalSum = totalSum + pKulafu;
+                        System.out.println("Successfully added Kulafu!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag8 = yawa.nextLine();
+                            if (tubag8.equals("Y")) {
+                                repeat1 = true;
+                        } 
+                        else if (tubag8.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " + sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 9:
+                        redHorse++;
+                        sRedHorse = sRedHorse + pRedHorse;
+                        totalSum = totalSum + pRedHorse;
+                        System.out.println("Successfully added RedHorse!");
+                        System.out.println("Do you want to order more? Y/N");
+                            String tubag9 = yawa.nextLine();
+                            if (tubag9.equals("Y")) {
+                                repeat1 = true;
+                        } 
+                        else if (tubag9.equals("N")) {
+                            System.out.println("Mga gi order:");
+                                if (lumpia > 0) {
+                                System.out.println("Lumpia: " + sLumpia + " Pesos (" +lumpia + ")");
+                                repeat1 = false;
+                            }
+                                if (humba > 0) {
+                                    System.out.println("Humba: " + sHumba + " Pesos (" +humba + ")");
+                                repeat1 = false;
+                            }
+                                if (manok > 0) {
+                                    System.out.println("Manok: " + sManok + " Pesos (" +manok + ")");
+                                repeat1 = false;
+                            }
+                                if (chips > 0) {
+                                    System.out.println("Chips: " + sChips + " Pesos (" +chips + ")");
+                                repeat1 = false;
+                            }         
+                                if (fries > 0) {
+                                    System.out.println("Fries: " + sFries + " Pesos (" +fries + ")");
+                                repeat1 = false;
+                            }     
+                                if (tempura > 0) {
+                                    System.out.println("Tempura: " + sTempura + " Pesos (" +tempura + ")");
+                                repeat1 = false;
+                            }     
+                                if (emperador > 0) {
+                                    System.out.println("Emperador: " + sEmperador + " Pesos (" +emperador + ")");
+                                repeat1 = false;
+                            }     
+                                if (kulafu > 0) {
+                                    System.out.println("Kulafu: " +sKulafu + " Pesos (" +kulafu + ")");
+                                repeat1 = false;
+                            }     
+                                if (redHorse > 0) {
+                                    System.out.println("Red Horse: " + sRedHorse + " Pesos (" +redHorse + ")");
+                                repeat1 = false;
+                            }     
+                            System.out.print("Total: " + totalSum + " Pesos");
+                        }
+                        break;
+                        case 10:
+                        System.out.println("Order Cancelled!");
+                        repeat1 = false;
+                        break;
+                        default:
+                        System.out.println("Wrong Order Number!");
+                        repeat1 = true;
+                    }
+                }
+            }
+                while (repeat1);
+        yawa.close();
+    }
+}
